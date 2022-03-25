@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/header"
+            style="@style/heading"
+            android:text="Feature Suggestion"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.058"
+            app:layout_constraintVertical_weight="0.2"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/bug_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            app:helperText="*required"
+            app:boxBackgroundColor="@color/white"
+            app:helperTextTextColor="#FF0000"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/header"
+            app:layout_constraintStart_toStartOf="@+id/header"
+            app:layout_constraintTop_toBottomOf="@id/header">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:inputType="text"
+                android:hint="Enter Feature Name"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/menu_dropdown"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="16dp"
+            android:background="#f2f2f2"
+            android:fontFamily="@font/roboto"
+            android:hint="Choose StoreFront"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/bug_container"
+            app:layout_constraintStart_toStartOf="@+id/bug_container"
+            app:layout_constraintTop_toBottomOf="@+id/bug_container"
+            app:layout_constraintVertical_weight="0.2">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/platform"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="16dp"
+            android:text="Choose Platform"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="21dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/menu_dropdown"
+            app:layout_constraintStart_toStartOf="@+id/menu_dropdown"
+            app:layout_constraintTop_toBottomOf="@+id/menu_dropdown" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/platform"
+            app:layout_constraintStart_toStartOf="@+id/platform"
+            app:layout_constraintTop_toBottomOf="@+id/platform"
+            tools:layout_editor_absoluteX="20dp">
+
+            <RadioButton
+                android:id="@+id/rb1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/ic_apple_logo" />
+
+            <RadioButton
+                android:id="@+id/rb2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/ic_icons8_android_os" />
+
+            <RadioButton
+                android:id="@+id/rb3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/ic_global_com" />
+
+            <RadioButton
+                android:id="@+id/rb4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/ic_devices_" />
+        </RadioGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/des_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:helperText="*required"
+            app:boxBackgroundColor="@color/white"
+            app:helperTextTextColor="#FF0000"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/radioGroup"
+            app:layout_constraintStart_toStartOf="@+id/radioGroup"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/bugd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:inputType="text"
+                android:hint="Explain the use case for the feature"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/repro_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:helperText="*required"
+            app:boxBackgroundColor="@color/white"
+            app:helperTextTextColor="#FF0000"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/des_container"
+            app:layout_constraintStart_toStartOf="@+id/des_container"
+            app:layout_constraintTop_toBottomOf="@+id/des_container"  >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/stepR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:inputType="text"
+                android:hint="Describe the problem that this feature solves"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/sol_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:boxBackgroundColor="@color/white"
+            app:helperTextTextColor="#FF0000"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/repro_container"
+            app:layout_constraintStart_toStartOf="@+id/repro_container"
+            app:layout_constraintTop_toBottomOf="@+id/repro_container" >
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pleaese upload any relavant media or design below , if found within the competition."
+                android:fontFamily="@font/roboto"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/sol_container"
+            app:layout_constraintStart_toStartOf="@+id/sol_container"
+            app:layout_constraintTop_toBottomOf="@+id/sol_container">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_baseline_file_upload_24"
+                android:fontFamily="@font/roboto"
+                android:text="upload"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="Upload Supporting Media,(Screenshot/Screenrecord)"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/submitBut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="50dp"
+            android:backgroundTint="#B10F2C"
+            android:text="Submit"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/linearLayout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/linearLayout"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

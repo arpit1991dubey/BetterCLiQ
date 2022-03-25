@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="126dp"
+            android:layout_height="94dp"
+            android:layout_marginTop="48dp"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.473"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/RegisterNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Name"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/RegisterName"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/RegisterName"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <EditText
+            android:id="@+id/RegisterName"
+            android:layout_width="268dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="12dp"
+            android:background="#ebe4e4"
+            android:hint="Enter Your Name"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/RegisterNameText" />
+
+        <TextView
+            android:id="@+id/RegisterPhoneText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Phone"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/RegisterPhone"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/RegisterPhone"
+            app:layout_constraintTop_toBottomOf="@+id/RegisterName"></TextView>
+
+        <EditText
+            android:id="@+id/RegisterPhone"
+            android:layout_width="268dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="12dp"
+            android:background="#ebe4e4"
+            android:hint="Enter Phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/RegisterPhoneText" />
+
+        <TextView
+            android:id="@+id/RegisterEmailText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="9dp"
+            android:text="Email"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/RegisterEmail"
+            app:layout_constraintEnd_toEndOf="@+id/RegisterEmail"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/RegisterEmail"
+            app:layout_constraintTop_toBottomOf="@+id/RegisterPhone"
+            app:layout_constraintVertical_bias="0.541" />
+
+        <EditText
+            android:id="@+id/RegisterEmail"
+            android:layout_width="266dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="44dp"
+            android:background="#ebe4e4"
+            android:hint="Enter Your Email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.482"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/RegisterPhone" />
+
+        <TextView
+            android:id="@+id/RegisterPasswordText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Password"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/RegisterPassword"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/RegisterPassword"
+            app:layout_constraintTop_toBottomOf="@+id/RegisterEmail"></TextView>
+
+        <EditText
+            android:id="@+id/RegisterPassword"
+            android:layout_width="264dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="16dp"
+            android:background="#ebe4e4"
+            android:hint="Enter Password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.489"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/RegisterPasswordText" />
+
+        <Button
+            android:id="@+id/SignUpButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+        android:backgroundTint="#B10F2C"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/RegisterPassword"
+            app:layout_constraintVertical_bias="0.286" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
